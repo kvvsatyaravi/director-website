@@ -30,17 +30,51 @@
                 <li class="nav-item  active pl-md-2"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg "></span> Home</a></li>
                 <li class="nav-item pl-md-3"><a class="nav-link" href="Storys.html"><span class="fa fa-book fa-lg"></span> Storys</a></li>
                 <li class="nav-item pl-md-3"><a class="nav-link" href="Feedback.html"><span class="fa fa-list fa-lg"></span> Feedback</a></li>
-                <li class="nav-item pl-md-3"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> About me</a></li>
+                <li class="nav-item pl-md-3"><a class="nav-link" href="about.html"><span class="fa fa-address-card fa-lg"></span> About me</a></li>
             </ul>    
         </div>
-    <button class="btn btn-warning btn-lg "><span class="fa fa-sign-in fa-lg"></span>Login</button>
+    <button class="btn btn-warning btn-lg " data-toggle="modal" data-target="#login"><span class="fa fa-sign-in fa-lg"></span>Login</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sign in</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form class="m-4">
+                    <div class="form-group row offset-md-2">
+                        <label for="name" class="col-xs-2  col-form-label"><h5>User:</h5></label>
+                        <div class="">
+                          <input type="text"  class="form-control border-dark offset-md-3 col-sm-3" placeholder="enter username" id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row offset-md-2">
+                        <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>Password:</h5></label>
+                        <div class="col-xs-9">
+                          <input type="password"  class="form-control border-dark offset-md-3" placeholder="enter password" id="staticEmail" >
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary ">Login</button>
+            </div>
+        </div>
+        </div>
+    </div>
     </div>
     </nav>                
     </header>
 
     <div class="container">
-        <div class="row">
-            <h2>Recently added storys</h2>
+        <div class="row offset-1 pt-3">
+            <h3>Recently added storys</h3>
         </div>
     </div>
     
@@ -56,18 +90,18 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#"><span class="fa fa-home"> Home</span></a></li>
-                        <li><a href="Storys.html"><span class="fa fa-book">  Storys</span></a></li>
-                        <li><a href="Feedback.html"><span class="fa fa-list">  Feedback</span></a></li>
-                        <li><a href="#"><span class="fa fa-address-card"> About me</span></a></li>
+                        <li><a href="index.html" class="text-dark"><i class="fa fa-home"></i> Home</a></li>
+                        <li><a href="Storys.html" class="text-dark"><span class="fa fa-book">  Storys</span></a></li>
+                        <li><a href="Feedback.html" class="text-dark"><span class="fa fa-list">  Feedback</span></a></li>
+                        <li><a href="about.html" class="text-dark"><span class="fa fa-address-card"> About me</span></a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
                     <h5>Contact Me</h5>
                     <address>
-                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-                        <i class="fa fa-envelope fa-lg"></i>: 
+                        <i class="fa fa-phone "></i>: +852 1234 5678<br>
+                        <i class="fa fa-fax "></i>: +852 8765 4321<br>
+                        <i class="fa fa-envelope "></i>: 
                         <a href="mailto:confusion@food.net">confusion@food.net</a>
                     </address>
                 </div>

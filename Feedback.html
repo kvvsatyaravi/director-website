@@ -21,45 +21,45 @@
     <header>
     <nav class="navbar navbar-dark  navbar-expand-sm ">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <img src="rc visual.png" class="img-fluid float-left row-3" height="120px" width="100px">             
-        <div class="collapse navbar-collapse" id="Navbar">     
-            <ul class="navbar-nav mr-auto pl-md-4">
-                <li class="nav-item pl-md-2"><a class="nav-link" href="index.html"><span class="fa fa-home fa-lg "></span> Home</a></li>
-                <li class="nav-item pl-md-3"><a class="nav-link" href="Storys.html"><span class="fa fa-book fa-lg"></span> Storys</a></li>
-                <li class="nav-item pl-md-3 active"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Feedback</a></li>
-                <li class="nav-item pl-md-3"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> About me</a></li>
-            </ul>    
-        </div>
     <button class="btn btn-warning btn-lg "><span class="fa fa-sign-in fa-lg"></span>Login</button>
     </div>
     </nav>                
     </header>
 
     <div class="container">
+        <div class="row-2 m-4 ">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html"><span class="fa fa-home fa-lg">Home</span></a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><span class="fa fa-list fa-lg">Feedback</span></li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="row-2">
-            <h1 class="offset-2 pt-3">Feedback </h1>
+            <h2 class="offset-2 pt-3">Feedback </h2>
         </div>
         <div class="row-4">
             <form class="m-4">
                 <div class="form-group row offset-md-2">
                     <label for="name" class="col-xs-2 offset-xs-1 col-form-label"><h5>Name:</h5></label>
                     <div class="col-xs-9">
-                      <input type="text"  class="form-control border-dark" placeholder="enter your name" id="staticEmail" >
+                      <input type="text"  class="form-control border-dark offset-md-3 " placeholder="enter your name" id="staticEmail" >
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
                     <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>story:</h5></label>
                     <div class="col-xs-9">
-                      <input type="text"  class="form-control border-dark" placeholder="story name" id="staticEmail" >
+                      <input type="text"  class="form-control border-dark offset-md-3" placeholder="story name" id="staticEmail" >
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
                     <label for="rating" class="col-xs-2 offset-xs-1 col-form-label"><h5>Rating:</h5></label>
                     <div class="">
-                      <select class="form-control border-dark">
+                      <select class="form-control border-dark offset-md-7">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -71,7 +71,7 @@
                 <div class="form-group row offset-md-2">
                     <label for="rating" class="col-xs-2 offset-xs-1 col-form-label"><h5>Narration:</h5></label>
                     <div class="">
-                      <select class="form-control border-dark">
+                      <select class="form-control border-dark offset-md-1">
                         <option>below average</option>
                         <option>average</option>
                         <option>excellent</option>
@@ -80,9 +80,9 @@
                     </div>  
                 </div>
                 <div class="form-group row offset-md-2">
-                    <label for="rating" class="col-xs-2 offset-xs-1 col-form-label"><h5>Story content:</h5></label>
+                    <label for="rating" class="col-xs-2 offset-xs-1 col-form-label"><h5>Story:</h5></label>
                     <div class="">
-                      <select class="form-control border-dark">
+                      <select class="form-control border-dark offset-md-4">
                         <option>below average</option>
                         <option>average</option>
                         <option>excellent</option>
@@ -93,18 +93,18 @@
                 <div class="form-group row offset-md-2">
                     <label for="mistakes" class="col-xs-2 offset-xs-1 col-form-label"><h5>Mistakes:</h5></label>
                     <div class="">
-                        <textarea rows="6" cols="42" class="border-dark form-control"></textarea>
+                        <textarea rows="6" cols="42" placeholder="write mistakes in points view" class="border-dark form-control offset-md-1"></textarea>
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
-                    <label for="sugestions" class="col-xs-2 offset-xs-1 col-form-label"><h5>suggestions:(optional)</h5></label>
+                    <label for="sugestions" class="col-xs-2 offset-xs-1 col-form-label"><h5>suggestions:</h5></label>
                     <div class="">
-                        <textarea rows="6" cols="42" class="border-dark form-control"></textarea>
+                        <textarea rows="6" cols="42" placeholder="give suggestions" class="border-dark form-control"></textarea>
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
                     
-                    <input type="button" class="btn btn-lg btn-primary" value="submit">
+                    <input type="button" class="btn btn-lg btn-primary offset-md-1 " value="submit">
                     
                 </div>
                 
