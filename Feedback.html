@@ -21,8 +21,43 @@
     <header>
     <nav class="navbar navbar-dark  navbar-expand-sm ">
     <div class="container">
-        <img src="rc visual.png" class="img-fluid float-left row-3" height="120px" width="100px">             
-    <button class="btn btn-warning btn-lg "><span class="fa fa-sign-in fa-lg"></span>Login</button>
+        <a href="index.html">
+          <img src="rc visual.png"  class="img-fluid float-left row-3" height="120px" width="100px">
+        </a>             
+    <button class="btn btn-warning btn-lg " data-toggle="modal" data-target="#login"><span class="fa fa-sign-in fa-lg"></span>Login</button>
+    <!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Sign in</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+              <form class="m-4">
+                  <div class="form-group row offset-md-2">
+                      <label for="name" class="col-xs-2  col-form-label"><h5>Username:</h5></label>
+                      <div class="">
+                        <input type="text"  class="form-control border-dark  " placeholder="enter username" id="staticEmail" >
+                      </div>
+                  </div>
+                  <div class="form-group row offset-md-2">
+                      <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>Password:</h5></label>
+                      <div class="col-xs-9">
+                        <input type="password"  class="form-control border-dark " placeholder="enter password" id="staticEmail" >
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary ">Login</button>
+          </div>
+      </div>
+      </div>
+    </div>
     </div>
     </nav>                
     </header>
@@ -51,9 +86,9 @@
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
-                    <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>story:</h5></label>
+                    <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>script:</h5></label>
                     <div class="col-xs-9">
-                      <input type="text"  class="form-control border-dark offset-md-3" placeholder="story name" id="staticEmail" >
+                      <input type="text"  class="form-control border-dark offset-md-3" placeholder="script name" id="staticEmail" >
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
