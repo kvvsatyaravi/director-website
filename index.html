@@ -2,7 +2,7 @@
     <title>
         RC visuals
     </title>
-    <link rel="icon" href="title.jpg" type="image/icon type">
+    <link rel="icon" href="images/rc.jpg" type="image/icon type">
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="style.css" > 
+    <link rel="stylesheet" href="css/style.css" > 
 <body>
     <header>
     <nav class="navbar navbar-dark  navbar-expand-sm ">
@@ -25,14 +25,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a href="index.html">
-            <img src="rc visual.png"  class="img-fluid float-left row-3" height="120px" width="100px">  
+            <img src="images/rc visual.png"  class="img-fluid float-left row-3" height="120px" width="100px">  
         </a>           
         <div class="collapse navbar-collapse" id="Navbar">     
             <ul class="navbar-nav mr-auto pl-md-4">
                 <li class="nav-item  active pl-md-2"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg "></span> Home</a></li>
-                <li class="nav-item pl-md-3"><a class="nav-link" href="Storys.html"><span class="fa fa-book fa-lg"></span> Storys</a></li>
-                <li class="nav-item pl-md-3"><a class="nav-link" href="Feedback.html"><span class="fa fa-list fa-lg"></span> Feedback</a></li>
-                <li class="nav-item pl-md-3"><a class="nav-link" href="about.html"><span class="fa fa-address-card fa-lg"></span> About me</a></li>
+                <li class="nav-item pl-md-3"><a class="nav-link" href="html files/Storys.html"><span class="fa fa-book fa-lg"></span> Storys</a></li>
+                <li class="nav-item pl-md-3"><a class="nav-link" href="html files/Feedback.html"><span class="fa fa-list fa-lg"></span> Feedback</a></li>
+                <li class="nav-item pl-md-3"><a class="nav-link" href="html files/about.html"><span class="fa fa-address-card fa-lg"></span> About me</a></li>
             </ul>    
         </div>
     <button class="btn btn-warning btn-lg " data-toggle="modal" data-target="#login"><span class="fa fa-sign-in fa-lg"></span>Login</button>
@@ -48,25 +48,26 @@
             </button>
             </div>
             <div class="modal-body">
-                <form class="m-4">
+                <form class="m-4" method="POST" action="login/loggedin.php">
                     <div class="form-group row offset-md-2">
                         <label for="name" class="col-xs-2  col-form-label"><h5>Username:</h5></label>
                         <div class="">
-                          <input type="text"  class="form-control border-dark  " placeholder="enter username" id="staticEmail" >
+                          <input type="text" name="username"  class="form-control border-dark  " placeholder="enter username" id="staticEmail" >
                         </div>
                     </div>
                     <div class="form-group row offset-md-2">
                         <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>Password:</h5></label>
                         <div class="col-xs-9">
-                          <input type="password"  class="form-control border-dark " placeholder="enter password" id="staticEmail" >
+                          <input type="password" name="password"  class="form-control border-dark " placeholder="enter password" id="staticEmail" >
                         </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary " value="Login">
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary ">Login</button>
-            </div>
+            
         </div>
         </div>
     </div>
@@ -93,9 +94,9 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-dark"><i class="fa fa-home"></i> Home</a></li>
-                        <li><a href="Storys.html" class="text-dark"><span class="fa fa-book">  Storys</span></a></li>
-                        <li><a href="Feedback.html" class="text-dark"><span class="fa fa-list">  Feedback</span></a></li>
-                        <li><a href="about.html" class="text-dark"><span class="fa fa-address-card"> About me</span></a></li>
+                        <li><a href="html files/Storys.html" class="text-dark"><span class="fa fa-book">  Storys</span></a></li>
+                        <li><a href="html files/Feedback.html" class="text-dark"><span class="fa fa-list">  Feedback</span></a></li>
+                        <li><a href="html files/about.html" class="text-dark"><span class="fa fa-address-card"> About me</span></a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">

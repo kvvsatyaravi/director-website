@@ -1,0 +1,101 @@
+<html>
+    <title>
+        RC visuals
+    </title>
+    <link rel="icon" href="../images/rc.jpg" type="image/icon type">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/popper.min.js" ></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="../css/style.css" > 
+<body>
+    <header>
+    <nav class="navbar navbar-dark  navbar-expand-sm ">
+    <div class="container">
+        <a href="../index.html">
+            <img src="../images/rc visual.png" href="index.html" class="img-fluid float-left row-3" height="120px" width="100px">
+        </a>            
+    <button class="btn btn-warning btn-lg " data-toggle="modal" data-target="#login"><span class="fa fa-sign-in fa-lg"></span>Login</button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sign in</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form class="m-4" method="POST" action="../login/loggedin.php">
+                    <div class="form-group row offset-md-2">
+                        <label for="name" class="col-xs-2  col-form-label"><h5>Username:</h5></label>
+                        <div class="">
+                          <input type="text" name="username"  class="form-control border-dark  " placeholder="enter username" id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row offset-md-2">
+                        <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>Password:</h5></label>
+                        <div class="col-xs-9">
+                          <input type="password" name="password"  class="form-control border-dark " placeholder="enter password" id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary " value="Login">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+    </nav>                
+    </header>
+
+    <div class="container">
+        <div class="row-2  m-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html"><span class="fa fa-home fa-lg">Home</span></a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><span class="fa fa-book fa-lg">Storys</span></li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+
+    <div class=" container">
+        <div class="row">
+          <div class="offset-md-1 col-md-10 col-sm-12">
+          <table class="table table-bordered">
+          <thead>
+            <tr class="bg-primary">
+               <th scope="col" width="690">Scripts list</th>       
+               <th scope="col" >Date/time</th>       
+            </tr>
+            </thead>
+          </table>
+        </div>
+    </div>
+
+    
+    
+    
+    
+        
+    
+    
+    
+</body>
+</html>
