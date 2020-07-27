@@ -39,43 +39,42 @@ if($_SESSION['username'])
     </div>
   </div>
 
-            <div class="container">
-                <div class="row p-3">
-                    <h2 class="col-7 offset-2 ">welcome admin</h2><br>
-                    <input type="button" class=" btn btn-info offset-md-2 offset-4 " onclick="logout();" value="logout">
-                </div>
-            </div>
+  <div class="container">
+    <div class="row p-3">
+      <h2 class="col-7 offset-2 ">welcome admin</h2><br>
+        <input type="button" class=" btn btn-info offset-md-2 offset-4 " onclick="logout();" value="logout">
+    </div>
+  </div>
             
-        <form action="admindata.php" method="POST">
-        <div class="container">
+    <form action="admindata.php" method="POST">
+      <div class="container">
         <div class="row">
             <h3 class="offset-md-2 offset-1 pt-3">enter your content</h3>
         </div>
-        <div class="row-2">
-            
+        <div class="row-2">      
                 <div class="form-group row offset-md-2">
                     <label for="name" class="col-xs-2 offset-xs-1 col-form-label"><h5>script name:</h5></label>
                     <div class="col-xs-9">
-                      <input type="text"  class="form-control border-dark offset-md-2 " placeholder="enter your script name" id="staticEmail" >
+                      <input type="text"  class="form-control border-dark offset-md-2 " placeholder="enter your script name" name="script" id="staticEmail" >
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
                     <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>genre:</h5></label>
                     <div class="col-xs-9">
-                      <input type="text"  class="form-control border-dark offset-md-5" placeholder="genre " id="staticEmail" >
+                      <input type="text"  class="form-control border-dark offset-md-5" placeholder="genre " id="staticEmail" name="genre">
                     </div>
                 </div>
                 
                 <div class="form-group row offset-md-2">
                     <label for="mistakes" class="col-xs-2 offset-xs-1 col-form-label"><h5>content:</h5></label>
                     <div class="">
-                        <textarea rows="15" cols="62" placeholder="write your content" class="border-dark form-control offset-md-2"></textarea>
+                        <textarea rows="15" cols="62" placeholder="write your content" name="content" class="border-dark form-control offset-md-2"></textarea>
                     </div>
                 </div>
                 
                 <div class="form-group row offset-md-2">
                     
-                    <input type="button" class=" btn btn-lg btn-primary offset-md-1 " value="submit">
+                    <input type="submit" class=" btn btn-lg btn-primary offset-md-1 " value="submit">
                     
                 </div>
                 

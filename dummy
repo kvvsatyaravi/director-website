@@ -1,0 +1,14 @@
+<?php
+include "login/config.php";
+$update = "SELECT script FROM (
+  SELECT script FROM script ORDER BY id DESC LIMIT 3
+) as r ORDER BY id";
+$genre ="SELECT genre FROM (
+  SELECT genre FROM script ORDER BY id DESC LIMIT 3
+) as r ORDER BY id";
+echo "<div class='card' style='width: 18rem;'>
+  <div class='card-body'>
+    <h5 class='card-title">$update</h5>
+    <p class='card-text'>$genre</p>
+  </div>
+</div>";

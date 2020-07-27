@@ -1,3 +1,4 @@
+
 <html>
     <title>
         RC visuals
@@ -78,6 +79,29 @@
     <div class="container">
         <div class="row offset-1 pt-3">
             <h3>Recently added storys</h3>
+        </div>
+        <div class="offset-md-1 col-7">
+        <?php
+        include "login/config.php";
+        $update = "SELECT * FROM (
+            SELECT * FROM script ORDER BY id DESC LIMIT 3
+          ) as r ORDER BY id";
+        
+        $agri = $con->query($update);
+        if ($agri->num_rows > 0){
+        while ($row = $agri->fetch_assoc() ) {
+            echo "<div class='card' style='width: 16rem;'>
+            <div class='card-body '>
+                <h5 class='card-title'>".$row['script']."</h5>
+                <p class='card-text'>".$row['genre']."</p>
+            </div><br>
+            </div>";
+        }
+        }
+        ?>
+
+
+
         </div>
     </div>
     
