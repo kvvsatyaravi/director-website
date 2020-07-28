@@ -30,7 +30,8 @@ if($_SESSION['username'])
             &ltu&gt underline &lt/u&gt<br>
             &ltb&gt bold text &lt/b&gt<br>
             &lti&gt italic text &lt/i&gt<br>
-            &ltp&gt paragraph &lt/p&gt</h4>
+            &ltp&gt paragraph &lt/p&gt
+            Default h5 tag for content </h4>
     </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

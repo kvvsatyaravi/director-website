@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="../css/style.css" > 
+    <style type="text/css">
+  tr:nth-child(even){
+         background:#7aa3cc;
+         }
+</style>
 <body>
     <header>
     <nav class="navbar navbar-dark  navbar-expand-sm ">
@@ -85,30 +90,30 @@
                <th scope="col" >Date/time</th>       
             </tr>
             </thead>
-            <tr>
+            
                 <?php
-                    include ('..login/config.php');
+                    include ('../login/config.php');
                     
                     if ($con->connect_error) {
-                        die("Connection failed: " . $con->connect_error);
+                        die('Connection failed: ' . $con->connect_error);
                         }
 
-                    $script = "SELECT * FROM script";
+                    $script = 'SELECT * FROM script';
                     $result = $con->query($script);
 
                     if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo "<td>".$row["script"]."</td>";
-                        echo "<td>".$row["date"]."</td>";
+                        echo '<tr><td class="col-5">'.$row['script'].'</td>';
+                        echo '<td class="col-2">'.$row['date'].'</td></tr>';
                     }
                     } else {
-                    echo "0 results";
+                    echo '0 results';
                     }
                     $con->close();
                         ?>
                     
-            </tr>
+            
           </table>
         </div>
     </div>

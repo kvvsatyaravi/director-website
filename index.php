@@ -18,20 +18,25 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/style.css" > 
+    <style>
+    h5.te{
+        text-align: justify;
+    }
+    </style>
 <body>
     <header>
     <nav class="navbar navbar-dark  navbar-expand-sm ">
-    <div class="container">
+    <div class="container pr-3">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="index.html">
+        <a href="index.php">
             <img src="images/rc visual.png"  class="img-fluid float-left row-3" height="120px" width="100px">  
         </a>           
         <div class="collapse navbar-collapse" id="Navbar">     
             <ul class="navbar-nav mr-auto pl-md-4">
-                <li class="nav-item  active pl-md-2"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg "></span> Home</a></li>
-                <li class="nav-item pl-md-3"><a class="nav-link" href="html files/Storys.html"><span class="fa fa-book fa-lg"></span> Storys</a></li>
+                <li class="nav-item  active pl-md-2"><a class="nav-link" href="./index.php"><span class="fa fa-home fa-lg "></span> Home</a></li>
+                <li class="nav-item pl-md-3"><a class="nav-link" href="html files/Storys.php"><span class="fa fa-book fa-lg"></span> Storys</a></li>
                 <li class="nav-item pl-md-3"><a class="nav-link" href="html files/Feedback.html"><span class="fa fa-list fa-lg"></span> Feedback</a></li>
                 <li class="nav-item pl-md-3"><a class="nav-link" href="html files/about.html"><span class="fa fa-address-card fa-lg"></span> About me</a></li>
             </ul>    
@@ -77,10 +82,11 @@
     </header>
 
     <div class="container">
-        <div class="row offset-1 pt-3">
-            <h3>Recently added storys</h3>
+        <div class="row  pt-3">
+            <h3 class="pl-4">Recently added storys</h3>
         </div>
-        <div class="offset-md-1 col-7">
+    </div>
+        <div class="container">
         <?php
         include "login/config.php";
         $update = "SELECT * FROM (
@@ -90,20 +96,26 @@
         $agri = $con->query($update);
         if ($agri->num_rows > 0){
         while ($row = $agri->fetch_assoc() ) {
-            echo "<div class='card' style='width: 16rem;'>
-            <div class='card-body '>
-                <h5 class='card-title'>".$row['script']."</h5>
-                <p class='card-text'>".$row['genre']."</p>
-            </div><br>
-            </div>";
+            echo '<div class=" col-12 card border-dark" >
+                  <div class="card-body">
+                    
+                    <h5 class="card-title te">script name:- '.$row['script'].'</h5>
+                    <h5 class="card-text te" name="test">genre:- '.$row['genre'].'</h5>
+                    
+                    <h5 class="offset-md-10  card-text">Date:- '.$row['date'].'</h5>
+                    <a href="login/dataview.php?id='.$row["id"].'" class="btn btn-primary">Click here</a>
+                    </form>
+                </div>
+                  </div>
+                   <div class="m-4"></div>';
         }
         }
         ?>
-
-
-
         </div>
-    </div>
+
+
+        
+    
     
     
     
@@ -117,8 +129,8 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-dark"><i class="fa fa-home"></i> Home</a></li>
-                        <li><a href="html files/Storys.html" class="text-dark"><span class="fa fa-book">  Storys</span></a></li>
+                        <li><a href="index.php" class="text-dark"><i class="fa fa-home"></i> Home</a></li>
+                        <li><a href="html files/Storys.php" class="text-dark"><span class="fa fa-book">  Storys</span></a></li>
                         <li><a href="html files/Feedback.html" class="text-dark"><span class="fa fa-list">  Feedback</span></a></li>
                         <li><a href="html files/about.html" class="text-dark"><span class="fa fa-address-card"> About me</span></a></li>
                     </ul>
@@ -128,6 +140,8 @@
                     <address> 
                         <a href="mailto:confusion@food.net">confusion@food.net</a>
                     </address>
+                    <h5 >Developer</h5>
+                    <h6>ravi</h6>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <h5 class="offset-4">Social links</h5>
@@ -151,6 +165,10 @@
     </footer>
 </body>
 <script>
-    
+  function submit() {
+  var newdat = document.getElementByName("test");
+
+  document.getElementById("myform").submit();
+}  
 </script>
 </html>
