@@ -21,6 +21,9 @@
   tr:nth-child(even){
          background:#7aa3cc;
          }
+         .just{
+             text-aligin:justify;
+         }
 </style>
 <body>
     <header>
@@ -104,7 +107,12 @@
                     if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo '<tr><td class="col-5">'.$row['script'].'</td>';
+                    echo '<tr>
+                        <td class="col-5 just" align="justify">
+                        '.$row['script'].
+                        '<br><div class="m-2"></div>
+                        <a href="../login/dataview.php?id='.$row["id"].'" class="btn btn-primary">Click here</a>
+                        </td>';
                         echo '<td class="col-2">'.$row['date'].'</td></tr>';
                     }
                     } else {

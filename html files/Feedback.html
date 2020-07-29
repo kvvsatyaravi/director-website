@@ -79,23 +79,23 @@
             <h2 class="offset-2 pt-3">Feedback </h2>
         </div>
         <div class="row-4">
-            <form class="m-4">
+            <form class="m-4" method="POST" action="../php/sendfeedback.php">
                 <div class="form-group row offset-md-2">
                     <label for="name" class="col-xs-2 offset-xs-1 col-form-label"><h5>Name:</h5></label>
                     <div class="col-xs-9">
-                      <input type="text"  class="form-control border-dark offset-md-3 " placeholder="enter your name" id="staticEmail" >
+                      <input type="text" name="name"  class="form-control border-dark offset-md-3 " placeholder="enter your name" id="staticEmail" >
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
                     <label for="story" class="col-xs-2 offset-xs-1 col-form-label"><h5>script:</h5></label>
                     <div class="col-xs-9">
-                      <input type="text"  class="form-control border-dark offset-md-3" placeholder="script name" id="staticEmail" >
+                      <input type="text" name="script" class="form-control border-dark offset-md-3" placeholder="script name" id="staticEmail" >
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
                     <label for="rating" class="col-xs-2 offset-xs-1 col-form-label"><h5>Rating:</h5></label>
                     <div class="">
-                      <select class="form-control border-dark offset-md-7">
+                      <select class="form-control border-dark offset-md-7" name="rating">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -107,7 +107,7 @@
                 <div class="form-group row offset-md-2">
                     <label for="rating" class="col-xs-2 offset-xs-1 col-form-label"><h5>Narration:</h5></label>
                     <div class="">
-                      <select class="form-control border-dark offset-md-1">
+                      <select class="form-control border-dark offset-md-1" name="narration">
                         <option>below average</option>
                         <option>average</option>
                         <option>excellent</option>
@@ -118,7 +118,7 @@
                 <div class="form-group row offset-md-2">
                     <label for="rating" class="col-xs-2 offset-xs-1 col-form-label"><h5>Story:</h5></label>
                     <div class="">
-                      <select class="form-control border-dark offset-md-4">
+                      <select class="form-control border-dark offset-md-4" name="storyrating">
                         <option>below average</option>
                         <option>average</option>
                         <option>excellent</option>
@@ -129,18 +129,18 @@
                 <div class="form-group row offset-md-2">
                     <label for="mistakes" class="col-xs-2 offset-xs-1 col-form-label"><h5>Mistakes:</h5></label>
                     <div class="">
-                        <textarea rows="6" cols="42" placeholder="write mistakes in points view" class="border-dark form-control offset-md-1"></textarea>
+                        <textarea rows="6" cols="42" placeholder="write mistakes in points view" name="mistakes" class="border-dark form-control offset-md-1"></textarea>
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
                     <label for="sugestions" class="col-xs-2 offset-xs-1 col-form-label"><h5>suggestions:</h5></label>
                     <div class="">
-                        <textarea rows="6" cols="42" placeholder="give suggestions" class="border-dark form-control"></textarea>
+                        <textarea rows="6" cols="42" placeholder="give suggestions" name="suggestions" class="border-dark form-control"></textarea>
                     </div>
                 </div>
                 <div class="form-group row offset-md-2">
                     
-                    <input type="button" class="btn btn-lg btn-primary offset-md-1 " value="submit">
+                    <input type="submit" class="btn btn-lg btn-primary offset-md-1 " value="submit">
                     
                 </div>
                 

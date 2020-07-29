@@ -43,7 +43,8 @@ if($_SESSION['username'])
   <div class="container">
     <div class="row p-3">
       <h2 class="col-7 offset-2 ">welcome admin</h2><br>
-        <input type="button" class=" btn btn-info offset-md-2 offset-4 " onclick="logout();" value="logout">
+        <input type="button" class=" btn btn-warning offset-sm-4 offset-md-7 " onclick="feedback();" value="Feedback">
+        <input type="button" class=" btn btn-info offset-md-2 offset-5 " onclick="logout();" value="logout">
     </div>
   </div>
             
@@ -88,6 +89,11 @@ if($_SESSION['username'])
        {
      location.href = "../index.html";
         } 
+
+        function feedback()
+        {
+      location.href = "../php/feedbackview.php";
+        }
      
     </script>
     <script>
